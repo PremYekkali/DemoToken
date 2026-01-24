@@ -37,3 +37,79 @@ When the contract is deployed:
 - The total supply is calculated as:  
   `initialSupply * 10^decimals`
 - The full token supply is assigned to the deployer’s address.
+
+```solidity
+constructor(uint256 initialSupply)
+```
+## Balance Tracking
+
+Balances are stored internally using a mapping:
+
+```solidity
+mapping(address => uint256) private balances;
+```
+
+You can query the balance of any address using:
+```solidity
+function balanceOf(address account) public view returns (uint256)
+```
+## Token Transfers
+
+Tokens can be transferred from the caller to another address using:
+
+```solidity
+function transfer(address recipient, uint256 amount) public returns (bool)
+````
+
+### Transfer Rules
+
+* The sender must have a sufficient token balance
+* The recipient address must not be the zero address
+* Balances are updated atomically
+* A `Transfer` event is emitted upon success
+
+---
+
+## Token Holder Check
+
+You can check whether an address currently holds any tokens using:
+
+```solidity
+function isTokenHolder(address account) public view returns (bool)
+```
+
+This function returns `true` if the address has a balance greater than zero.
+
+---
+
+## Events
+
+### Transfer
+
+Emitted whenever tokens are successfully transferred:
+
+```solidity
+event Transfer(address indexed from, address indexed to, uint256 value);
+```
+
+This event allows wallets, block explorers, and indexers to track token movements.
+
+---
+
+## Limitations
+
+This contract is **not fully ERC20-compliant** and intentionally omits(To be added in future):
+
+* `approve` / `allowance`
+* `transferFrom`
+* Minting or burning after deployment
+* Ownership or role-based access control
+* Pausing or upgrade mechanisms
+
+Do **not** use this contract in production without additional features and a security audit.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
