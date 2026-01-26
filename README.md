@@ -1,3 +1,9 @@
+# Demo Token
+
+![Solidity](https://img.shields.io/badge/solidity-^0.8.0-363636?style=flat&logo=solidity)
+![License](https://img.shields.io/badge/license-MIT-blue)
+---
+
 ## Overview
 
 `DemoToken` is a simple ERC20-like token smart contract written in Solidity.  
