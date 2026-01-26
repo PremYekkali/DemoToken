@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// Basic token contract with minimal features
 contract DemoToken {
     // Public variables
     string public name = "DemoToken";
@@ -37,8 +38,8 @@ contract DemoToken {
         return true;
     }
 
-    // Getter function to check if an address is a token holder
-    function isTokenHolder(address account) public view returns (bool) {
+    // Getter function to check if an address is a token holder or not
+    function isTokenHolder(address account) external view returns (bool) {
         return balances[account] > 0;
     }
 }
