@@ -16,7 +16,7 @@ This contract is intentionally minimal and designed for learning, demos, and ear
 ## Features
 
 - Fixed token supply minted at deployment  
-- Token balance tracking per address  
+- Token balance tracking per user address  
 - Basic token transfers between addresses  
 - Public token metadata (name, symbol, decimals)  
 - Transfer event emission for off-chain tracking  
@@ -78,7 +78,7 @@ function transfer(address recipient, uint256 amount) public returns (bool)
 
 ## Token Holder Check
 
-You can check whether an address currently holds any tokens using:
+You can check whether a user's address currently holds any tokens using:
 
 ```solidity
 function isTokenHolder(address account) public view returns (bool)
