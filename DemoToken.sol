@@ -30,11 +30,14 @@ contract DemoToken {
 
     // Transfer function to send tokens to another address
     function transfer(address recipient, uint256 amount) external returns (bool) {
+        require(recipient != address(0), "Zero address");
+        require(amount > 0, "Zero amount");
         require(balances[msg.sender] >= amount, "Insufficient balance");
-        require(recipient != address(0), "Invalid recipient address");
 
-        balances[msg.sender] -= amount;
-        balances[recipient] += amount;
+        unchecked {
+            balances[msg.sender] -= amount;
+            balances[recipient] += amount;
+        }
 
         emit Transfer(msg.sender, recipient, amount);
         return true;
@@ -42,6 +45,6 @@ contract DemoToken {
 
     // Getter function to check if an address is a token holder or not
     function isTokenHolder(address account) external view returns (bool) {
-        return balances[account] > 0;
+        return balances[account] != 0;
     }
 }
