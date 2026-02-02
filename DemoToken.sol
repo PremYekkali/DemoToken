@@ -17,8 +17,10 @@ contract DemoToken {
 
     // Constructor to set the initial supply and assign it to the deployer
     constructor(uint256 initialSupply) {
-        totalSupply = initialSupply * (10 ** uint256(decimals));
-        balances[msg.sender] = totalSupply;
+        // initialSupply is expected in the smallest units (wei-style)
+        totalSupply = initialSupply;
+        balances[msg.sender] = initialSupply;
+        emit Transfer(address(0), msg.sender, initialSupply);
     }
 
     // Getter function to check the balance of an address
