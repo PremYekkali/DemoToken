@@ -24,12 +24,12 @@ contract DemoToken {
     }
 
     // Getter function to check the balance of an address
-    function balanceOf(address account) public view returns (uint256) {
+    function balanceOf(address account) external view returns (uint256) {
         return balances[account];
     }
 
     // Transfer function to send tokens to another address
-    function transfer(address recipient, uint256 amount) public returns (bool) {
+    function transfer(address recipient, uint256 amount) external returns (bool) {
         require(balances[msg.sender] >= amount, "Insufficient balance");
         require(recipient != address(0), "Invalid recipient address");
 
