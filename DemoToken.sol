@@ -4,9 +4,9 @@ pragma solidity ^0.8.0;
 // Basic token contract with minimal features
 contract DemoToken {
     // Public variables
-    string public name = "DemoToken";
-    string public symbol = "DTK";
-    uint8 public decimals = 18;
+    string public constant name = "DemoToken";
+    string public constant symbol = "DTK";
+    uint8 public constant decimals = 18;
     uint256 public totalSupply;
 
     // Mapping to store balances
