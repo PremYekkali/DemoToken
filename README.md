@@ -9,7 +9,7 @@
 `DemoToken` is a simple ERC20-like token smart contract written in Solidity.  
 It demonstrates the core mechanics of a fungible token, including balance tracking, token transfers, and basic metadata such as name, symbol, and decimals.
 
-This contract is intentionally minimal and designed for learning, demos, and early-stage experimentation rather than production use.
+This contract is intentionally minimal and designed for demos and early-stage experimentation rather than production use.
 
 ---
 
@@ -104,7 +104,7 @@ This event allows wallets, block explorers, and indexers to track token movement
 
 ## Limitations
 
-This contract is **not fully ERC20-compliant** and intentionally omits(To be added in future):
+This contract is **not fully ERC20-compliant** and intentionally omits(To be added in future as project progresses):
 
 * `approve` / `allowance`
 * `transferFrom`
