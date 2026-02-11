@@ -23,7 +23,7 @@ contract DemoToken {
         emit Transfer(address(0), msg.sender, initialSupply);
     }
 
-    // Getter function to check the balance of an address
+    // Getter function to check the balance of a user's address
     function balanceOf(address account) external view returns (uint256) {
         return balances[account];
     }
@@ -43,7 +43,7 @@ contract DemoToken {
         return true;
     }
 
-    // Getter function to check if an address is a token holder or not
+    // Getter function to check if a user address is a token holder or not
     function isTokenHolder(address account) external view returns (bool) {
         return balances[account] != 0;
     }
