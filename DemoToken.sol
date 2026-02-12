@@ -8,6 +8,8 @@ contract DemoToken {
     string public constant symbol = "DTK";
     uint8 public constant decimals = 18;
     uint256 public totalSupply;
+    // Count of users who are currently holding the token.
+    uint256 public holderCount;
 
     // Mapping to store balances
     mapping(address => uint256) private balances;
@@ -20,6 +22,7 @@ contract DemoToken {
         // initialSupply is expected in the smallest units (wei-style)
         totalSupply = initialSupply;
         balances[msg.sender] = initialSupply;
+        holderCount++;
         emit Transfer(address(0), msg.sender, initialSupply);
     }
 
@@ -34,9 +37,19 @@ contract DemoToken {
         require(amount > 0, "Zero amount");
         require(balances[msg.sender] >= amount, "Insufficient balance");
 
+        // If the recipient had 0 tokens before the transfer, they are gonna have some tokens and will become a token holder, hence incrementing the counter
+        if(!isTokenHolder(recipient)) {
+            holderCount++;
+        }
+
         unchecked {
             balances[msg.sender] -= amount;
             balances[recipient] += amount;
+        }
+
+        // If msg.sender runs out of tokens, they are no longer a token holder, hence decrementing the counter
+        if(!isTokenHolder(msg.sender)) {
+            holderCount--;
         }
 
         emit Transfer(msg.sender, recipient, amount);
