@@ -19,7 +19,8 @@ This contract is intentionally minimal and designed for demos and early-stage ex
 - Token balance tracking per user address  
 - Basic token transfers between addresses  
 - Public token metadata (name, symbol, decimals)  
-- Transfer event emission for off-chain tracking  
+- Transfer event emission for off-chain tracking
+- Number of token holders tracking
 
 ---
 
