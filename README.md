@@ -41,8 +41,8 @@ This contract is intentionally minimal and designed for demos and early-stage ex
 When the contract is deployed:
 
 - The constructor accepts an `initialSupply` parameter.
-- The total supply is calculated as:  
-  `initialSupply * 10^decimals`
+- `initialSupply` must be provided in the smallest unit (wei-style).
+- `totalSupply` is set directly to `initialSupply`.
 - The full token supply is assigned to the deployer’s address.
 
 ```solidity
