@@ -58,14 +58,14 @@ mapping(address => uint256) private balances;
 
 You can query the balance of any address using:
 ```solidity
-function balanceOf(address account) public view returns (uint256)
+function balanceOf(address account) external view returns (uint256)
 ```
 ## Token Transfers
 
 Tokens can be transferred from the caller to another address using:
 
 ```solidity
-function transfer(address recipient, uint256 amount) public returns (bool)
+function transfer(address recipient, uint256 amount) external returns (bool)
 ````
 
 ### Transfer Rules
@@ -82,7 +82,7 @@ function transfer(address recipient, uint256 amount) public returns (bool)
 You can check whether a user's address currently holds any tokens using:
 
 ```solidity
-function isTokenHolder(address account) public view returns (bool)
+function isTokenHolder(address account) external view returns (bool)
 ```
 
 This function returns `true` if the address has a balance greater than zero.
