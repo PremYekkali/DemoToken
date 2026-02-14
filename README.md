@@ -20,7 +20,7 @@ This contract is intentionally minimal and designed for demos and early-stage ex
 - Basic token transfers between addresses  
 - Public token metadata (name, symbol, decimals)  
 - Transfer event emission for off-chain tracking
-- Number of token holders tracking
+- Automatic tracking of active token holders (addresses with non-zero balance)
 
 ---
 
@@ -86,6 +86,14 @@ function isTokenHolder(address account) public view returns (bool)
 ```
 
 This function returns `true` if the address has a balance greater than zero.
+
+## Token Holder Count
+
+The contract maintains a public `holderCount` variable that tracks the number of addresses currently holding a non-zero token balance.
+
+```solidity
+uint256 public holderCount;
+```
 
 ---
 
