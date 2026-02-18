@@ -114,7 +114,7 @@ This event allows wallets, block explorers, and indexers to track token movement
 
 ## Limitations
 
-This contract is **not fully ERC20-compliant** and intentionally omits(To be added in future as project progresses):
+This contract is **not fully ERC20-compliant** and intentionally omits:
 
 * Does not implement the ERC20 interface
 * `approve` / `allowance`
