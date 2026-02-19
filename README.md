@@ -51,7 +51,7 @@ constructor(uint256 initialSupply)
 ```
 ## Balance Tracking
 
-Balances are stored internally using a mapping:
+Balances are stored internally using a mapping against each user address:
 
 ```solidity
 mapping(address => uint256) private balances;
