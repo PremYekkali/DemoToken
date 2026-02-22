@@ -57,7 +57,7 @@ Balances are stored internally using a mapping against each user address:
 mapping(address => uint256) private balances;
 ```
 
-You can query the balance of any address using:
+You can query the balance of any user address using:
 ```solidity
 function balanceOf(address account) external view returns (uint256)
 ```
