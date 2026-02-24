@@ -80,13 +80,13 @@ function transfer(address recipient, uint256 amount) external returns (bool)
 
 ## Token Holder Check
 
-You can check whether a user's address currently holds any tokens using:
+You can check whether a user's address currently holds any tokens or not using:
 
 ```solidity
 function isTokenHolder(address account) external view returns (bool)
 ```
 
-This function returns `true` if the address has a balance greater than zero.
+This function returns `true` if the address has a balance greater than Zero.
 
 ## Token Holder Count
 
