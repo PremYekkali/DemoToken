@@ -67,6 +67,11 @@ contract DemoToken {
             totalSupply -= amount;
         }
 
+        // If the burner runs out of tokens, they are no longer a token holder, hence decrementing the counter
+        if(!isTokenHolder(msg.sender)) {
+            holderCount--;
+        }
+
         emit Burn(msg.sender, amount);
         emit Transfer(msg.sender, address(0), amount);
         return true;
