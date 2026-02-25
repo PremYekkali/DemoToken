@@ -57,6 +57,21 @@ contract DemoToken {
         return true;
     }
 
+    // Burn function to permanently destroy tokens
+    function burn(uint256 amount) external returns (bool) {
+        require(amount > 0, "Zero amount");
+        require(balances[msg.sender] >= amount, "Insufficient balance");
+
+        unchecked {
+            balances[msg.sender] -= amount;
+            totalSupply -= amount;
+        }
+
+        emit Burn(msg.sender, amount);
+        emit Transfer(msg.sender, address(0), amount);
+        return true;
+    }
+
     // Getter function to check if a user address is a token holder or not
     function isTokenHolder(address account) external view returns (bool) {
         return balances[account] != 0;
