@@ -16,6 +16,7 @@ contract DemoToken {
 
     // Events
     event Transfer(address indexed from, address indexed to, uint256 value);
+    event Burn(address indexed burner, uint256 value);
 
     // Constructor to set the initial supply and assign it to the deployer
     constructor(uint256 initialSupply) {
