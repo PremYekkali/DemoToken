@@ -89,6 +89,26 @@ function isTokenHolder(address account) external view returns (bool)
 
 This function returns `true` if the address has a balance greater than Zero.
 
+---
+
+## Token Burning
+
+Users can permanently destroy their tokens using the burn function. Burning reduces both the user's balance and the total token supply.
+
+```solidity
+function burn(uint256 amount) external returns (bool)
+```
+
+### Burn Rules
+
+* The caller must have sufficient balance to burn
+* The amount must be greater than zero
+* Burned tokens are permanently removed from circulation
+* Total supply decreases by the burned amount
+* If a user burns all their tokens, the holder count decreases
+
+---
+
 ## Token Holder Count
 
 The contract maintains a public `holderCount` variable that tracks the number of addresses currently holding a non-zero token balance.
