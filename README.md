@@ -131,6 +131,16 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 This event allows wallets, block explorers, and indexers to track token movements.
 
+### Burn
+
+Emitted whenever tokens are burned:
+
+```solidity
+event Burn(address indexed burner, uint256 value);
+```
+
+This event logs the permanent destruction of tokens for tracking deflationary mechanics.
+
 ---
 
 ## Limitations
