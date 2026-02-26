@@ -22,6 +22,7 @@ This contract is intentionally minimal and designed for demos and early-stage ex
 - Public token metadata (name, symbol, decimals)  
 - Transfer event emission for off-chain tracking
 - Automatic tracking of active token holders (addresses with non-zero balance)
+- Token burning to permanently destroy tokens and reduce supply
 
 ---
 
@@ -119,7 +120,7 @@ This contract is **not fully ERC20-compliant** and intentionally omits:
 * Does not implement the ERC20 interface
 * `approve` / `allowance`
 * `transferFrom`
-* Minting or burning after deployment
+* Minting after deployment
 * Ownership or role-based access control
 * Pausing or upgrade mechanisms
 * `holderCount` is a custom feature and not part of the ERC20 standard  
