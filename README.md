@@ -139,7 +139,7 @@ Emitted whenever tokens are burned:
 event Burn(address indexed burner, uint256 value);
 ```
 
-This event logs the permanent destruction of tokens for tracking deflationary mechanics.
+This event logs the permanent destruction of tokens used to track deflationary mechanics.
 
 ---
 
