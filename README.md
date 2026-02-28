@@ -151,7 +151,7 @@ This contract is **not fully ERC20-compliant** and intentionally omits:
 * `approve` / `allowance`
 * `transferFrom`
 * Minting after deployment
-* Ownership or role-based access control
+* Ownership or role-based access control (could be added later)
 * Pausing or upgrade mechanisms
 * `holderCount` is a custom feature and not part of the ERC20 standard  
 
