@@ -148,8 +148,8 @@ This event logs the permanent destruction of tokens used to track deflationary m
 This contract is **not fully ERC20-compliant** and intentionally omits:
 
 * Does not implement the ERC20 interface
-* No `approve` / `allowance`
-* No functions like `transferFrom`
+* No `approve` / `allowance` features
+* No functions like `transferFrom` feature
 * No Minting after deployment
 * Ownership or role-based access control (could be added later)
 * No Pausing or upgrade mechanisms
