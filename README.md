@@ -81,19 +81,19 @@ function transfer(address recipient, uint256 amount) external returns (bool)
 
 ## Token Holder Check
 
-You can check whether a user's address currently holds any tokens or not using:
+You can check whether a user's address currently holds any tokens by using:
 
 ```solidity
 function isTokenHolder(address account) external view returns (bool)
 ```
 
-This function returns `true` if the address has a balance greater than Zero.
+This function returns `true` if the address has a balance greater than zero.
 
 ---
 
 ## Token Burning
 
-Users can permanently destroy their tokens using the burn function. Burning reduces both the user's balance and the total token supply.
+Users can permanently destroy their tokens using the burn function in the contract. Burning reduces both the user's balance and the total token supply.
 
 ```solidity
 function burn(uint256 amount) external returns (bool)
