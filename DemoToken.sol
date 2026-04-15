@@ -17,6 +17,7 @@ contract DemoToken {
     // Events
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Burn(address indexed burner, uint256 value);
+    event TransferWithMemo(address indexed from, address indexed to, uint256 value, string memo);
 
     // Constructor to set the initial supply and assign it to the deployer
     constructor(uint256 initialSupply) {
@@ -74,6 +75,12 @@ contract DemoToken {
 
         emit Burn(msg.sender, amount);
         emit Transfer(msg.sender, address(0), amount);
+        return true;
+    }
+
+    function transferWithMemo(address recipient, uint256 amount, string calldata memo) external returns (bool) {
+        require(transfer(recipient, amount), "Transfer failed");
+        emit TransferWithMemo(msg.sender, recipient, amount, memo);
         return true;
     }
 
