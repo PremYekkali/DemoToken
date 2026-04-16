@@ -141,6 +141,17 @@ event Burn(address indexed burner, uint256 value);
 
 This event logs the permanent destruction of tokens used to track deflationary mechanics.
 
+### TransferWithMemo
+
+Emitted when a transfer includes an additional memo message:
+
+```solidity
+event TransferWithMemo(address indexed from, address indexed to, uint256 value, string memo);
+````
+
+This event allows attaching contextual information to token transfers for off-chain use cases.
+
+
 ---
 
 ## Limitations
