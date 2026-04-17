@@ -119,6 +119,18 @@ uint256 public holderCount;
 
 ---
 
+## Transfer With Memo
+
+Users can transfer tokens along with an optional message:
+
+```solidity
+function transferWithMemo(address recipient, uint256 amount, string calldata memo) external returns (bool)
+````
+
+This function performs a standard token transfer and emits an additional event containing the provided memo.
+
+---
+
 ## Events
 
 ### Transfer
@@ -150,7 +162,6 @@ event TransferWithMemo(address indexed from, address indexed to, uint256 value, 
 ````
 
 This event allows attaching contextual information to token transfers for off-chain use cases.
-
 
 ---
 
