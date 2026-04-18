@@ -129,6 +129,12 @@ function transferWithMemo(address recipient, uint256 amount, string calldata mem
 
 This function performs a standard token transfer and emits an additional event containing the provided memo.
 
+### Use Cases
+
+- Attaching notes to transactions (e.g., payment references)
+- Off-chain indexing and analytics
+- Improved transaction context for wallets and explorers
+
 ---
 
 ## Events
