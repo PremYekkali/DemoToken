@@ -135,6 +135,12 @@ This function performs a standard token transfer and emits an additional event c
 - Off-chain indexing and analytics
 - Improved transaction context for wallets and explorers
 
+### Notes
+
+- The memo does not affect balances or transfer logic
+- It is emitted only as part of an event
+- This feature is optional and does not interfere with existing functionality
+
 ---
 
 ## Events
