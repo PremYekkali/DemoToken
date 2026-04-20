@@ -23,6 +23,7 @@ This contract is intentionally minimal and designed for demos and early-stage ex
 - Transfer event emission for off-chain tracking
 - Automatic tracking of active token holders (addresses with non-zero balance)
 - Token burning to destroy tokens and reduce supply permanently
+- Token transfers with optional on-chain memo messages
 
 ---
 
