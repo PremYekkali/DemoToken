@@ -188,6 +188,7 @@ This contract is **not fully ERC20-compliant** and intentionally omits:
 * No Minting after deployment
 * No Ownership or role-based access control (could be added later)
 * No Pausing or upgrade mechanisms
+* Includes non-standard extension (`transferWithMemo`) not part of ERC20
 
 Do **not** use this smart contract in a production environment without a proper review & security audit.
 
