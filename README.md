@@ -10,7 +10,7 @@
 It mimics some basic token behavior but does not fully implement the ERC20 standard.
 It demonstrates the core mechanics of a fungible token, including balance tracking, token transfers, and basic metadata such as name, symbol, and decimals.
 
-This contract is intentionally minimal and designed for demos and early-stage experimentation, not production use.
+This contract is intentionally minimal and designed for demo and early-stage experimentation, not for production use.
 
 ---
 
