@@ -184,7 +184,7 @@ This contract is **not fully ERC20-compliant** and intentionally omits:
 
 * Does not implement the ERC20 interface
 * No `approve` / `allowance` features
-* No functions like `transferFrom` feature
+* No functions like the `transferFrom` feature
 * No Minting after deployment
 * No Ownership or role-based access control (could be added later)
 * No Pausing or upgrade mechanisms
